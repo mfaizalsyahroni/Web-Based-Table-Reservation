@@ -1,0 +1,174 @@
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: helvetica;
+}
+
+header {
+    display: flex;
+    background-color: lightslategrey;
+    width: 100%;
+    justify-content: space-between;
+    padding: 8px 16px;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.right {
+    display: flex;
+    gap: 16px;
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    padding: 16px 0px;
+}
+
+
+.card {
+    display: flex;
+    background-color: silver;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 8px;
+    width: 35%;
+    height: 180px;
+    cursor: pointer;
+    box-shadow: #eaeaeae2 0 4px 8px 4px;
+}
+
+.card:hover {
+    scale: 1.035;
+    transition: all .3s ease-in-out;
+}
+
+.loginn {
+    background-image: url('./ui/cover.png');
+    background-size: cover;
+}
+
+.super-center {
+    min-height: 88vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+}
+
+
+h3 {
+    color: white;
+    text-align: center;
+}
+
+
+i {
+    color: white;
+    text-align: center;
+}
+
+.signature {
+    color: #f0f0f0;
+    padding: 0px 30px;
+    border: 1px #ccc;
+    display: grid;
+    justify-content: right;
+    align-items: right;
+}
+
+#login {
+    background-image: url('./ui/cover.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#report {
+    background-image: url('./ui/cover.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#meja {
+    background-image: url('./ui/cover.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#nomeja {
+    background-image: url('./ui/cover.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#fs {
+    background-image: url('./ui/cover.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+form {
+    background-color: #404040;
+    padding: 18px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+form input,
+form button {
+    padding: 8px 16px;
+    font-size: 18px;
+}
+
+input {
+    border: transparent;
+    background-color: #eaeaea;
+    border-radius: 8px;
+}
+
+
+form button {
+    background-color: cornflowerblue;
+    border: none;
+    color: #eaeaea;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #40619c;
+    color: white;
+    transition: all 3.s ease-in-out;
+}
