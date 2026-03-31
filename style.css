@@ -25,34 +25,32 @@ header a {
     cursor: pointer;
 }
 
-.right {
+
+.right{
     display: flex;
     gap: 16px;
 }
 
+
+
+
+.card {
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    width: 180px;
+    height: 120px;
+    margin: 10px;
+    text-align: center;
+}
 
 .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 16px;
-    padding: 16px 0px;
 }
 
-
-.card {
-    display: flex;
-    background-color: silver;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 8px;
-    width: 35%;
-    height: 180px;
-    cursor: pointer;
-    box-shadow: #eaeaeae2 0 4px 8px 4px;
-}
 
 .card:hover {
     scale: 1.035;
@@ -64,6 +62,8 @@ header a {
     background-size: cover;
 }
 
+
+
 .super-center {
     min-height: 88vh;
     display: flex;
@@ -73,28 +73,22 @@ header a {
     gap: 16px;
 }
 
+
+
 h1 {
     font-size: 24px;
     font-weight: 600;
+    color: white;
     text-align: center;
 }
 
-h2 {
+h2, h3 , i {
     color: white;
     text-align: center;
 }
 
 
-h3 {
-    color: white;
-    text-align: center;
-}
 
-
-i {
-    color: white;
-    text-align: center;
-}
 
 .signature {
     color: #f0f0f0;

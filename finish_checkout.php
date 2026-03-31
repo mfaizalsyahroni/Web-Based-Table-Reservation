@@ -20,19 +20,19 @@ if (isset($_GET['nama_pelanggan']) && $_GET['nama_pelanggan']) {
 }
 
 if (isset($_POST['finish_checkout'])) {
-    $hari = date('Y-m-d');
-    $jam = date('H:i:s');
+    $hari = date('d F Y');
+    $jam = date('H:i');
 
     $clear_meja_query = "UPDATE meja SET nama_pelanggan=NULL, jumlah_orang=NULL, status=0 WHERE no_meja= '$no_meja' ";
-    $insert_history_query = "INSERT INTO history(no_meja, nama_pelanggan, hari, jam) VALUES ('$no_meja', '$nama_pelanggan', '$hari', '$jam')";
+    // $insert_history_query = "INSERT INTO history(no_meja, nama_pelanggan, hari, jam) VALUES ('$no_meja', '$nama_pelanggan', '$hari', '$jam')";
 
 
 
     $clear_meja = $db->query($clear_meja_query);
-    $insert_history = $db->query($insert_history_query);
+    // $insert_history = $db->query($insert_history_query);
 
 
-    if ($clear_meja && $insert_history) {
+    if ($clear_meja) {
         header("location: index.php");
     } else {
         echo "meja berhasil di update";
@@ -48,7 +48,7 @@ if (isset($_POST['finish_checkout'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style1.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>FINISH CHECK OUT</title>
 </head>
 
@@ -56,7 +56,7 @@ if (isset($_POST['finish_checkout'])) {
     <?php include("layout/header.php") ?>
 
     <div class="super-center">
-        <h3>Kosongkan meja<?= $no_meja ?></h3>
+        <h3>Kosongkan meja <?= ' ' . $no_meja ?></h3>
         <i>order atas nama <?= $nama_pelanggan ?></i>
         <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
             <button type="submit" name="finish_checkout">SELESAI</button>

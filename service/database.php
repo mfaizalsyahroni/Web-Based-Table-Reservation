@@ -6,6 +6,9 @@ $username = "root";
 $password = "";
 //database connection
 
+
+
+//MySQLi (Object-Oriented)**
 $db = mysqli_connect($hostname, $username, $password, $database_name);
 //create connection
 

@@ -1,6 +1,6 @@
 <?php
 require_once("service/database.php");
-//require_once (membutuhkan satu kali koneksi to database) {function}
+//require_once (membutuhkan satu kali koneksi to database)
 session_start();
 
 
@@ -15,7 +15,7 @@ if (isset($_SESSION['is_login']) && $_SESSION['is_login']) {
 if (isset($_POST['login'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
-    //echo memunculkan inputan nya (post)
+    //echo memunculkan inputan nya (post) variabel tabel admin
 
 
     $select_admin_query = "SELECT * FROM admin WHERE username ='$username' AND password ='$password'";
@@ -48,7 +48,7 @@ if (isset($_POST['login'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale= 1.0">
-    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="style.css">
     <title>Welcome Pendekar People</title>
 </head>
 
@@ -68,9 +68,9 @@ if (isset($_POST['login'])) {
             <!-- method: post (rahasia) -->
 
             <label for="">Username</label>
-            <input name="username">
+            <input name="username" autocomplete="off">
             <label for="">Password</label>
-            <input type="password" name="password">
+            <input type="password" name="password" autocomplete="off">
             <br>
             <button type="submit" name="login">LOGIN</button>
         </form>
